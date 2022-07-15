@@ -131,9 +131,13 @@ nav ul li:last-child {
 }
 
 .found ul li {
-    padding: 2rem;
     line-height: 2;
-    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid black;
+}
+
+.found ul li div {
+    padding: 1.5em;
+    border-top: 1px solid black;
 }
 
 .found p {
@@ -181,6 +185,10 @@ nav ul li:last-child {
     font-size: 1em;
     font-weight: 400;
     font-family: sans-serif;
+}
+
+.totw ul li img {
+    border-left: 1px solid black;
 }
 
 @media (min-width: 48rem) {
