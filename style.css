@@ -54,22 +54,20 @@ ul {
 
 .grid-item {
     width: 50%;
+    border: 0.75em solid white;
 }
 
 @media (min-width: 48rem) {
     .grid-item {
         width: 25%;
+        border: 1.5em solid white;
     }
 }
 
 header {
     width: 100%;
-    position: fixed;
-    left: 0;
-    right: 0;
+    position: sticky;
     top: 0;
-    margin: 0 auto;
-    background: 0 0;
     height: auto;
     background: black;
     color: white;
@@ -121,7 +119,7 @@ nav ul li:last-child {
 }
 
 .found {
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 .found ul {
@@ -135,8 +133,7 @@ nav ul li:last-child {
 .found ul li {
     padding: 2rem;
     line-height: 2;
-    border: 1px solid black;
-    /* background: rgba(255,255,255,0.48); */
+    background: rgba(255, 255, 255, 0.88);
 }
 
 .found p {
@@ -145,14 +142,59 @@ nav ul li:last-child {
 }
 
 .totw {
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 .totw h1 {
     margin-bottom: 1em;
 }
 
+.totw ul {}
+
 .totw ul li {
-    padding: 2em 0;
-    border-bottom: 1px solid;
+    border: 1px solid black;
+    display: flex;
+    padding-left: 1.5em;
+    margin: 2em 0;
+    line-height: 1.25;
+    align-items: center;
+}
+
+.totw ul li div {
+    flex: 50%;
+}
+
+.totw ul li p {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: 900;
+    font-family: sans-serif;
+    opacity: 0.5;
+}
+
+.totw ul li h2 {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.totw ul li h3 {
+    font-size: 1em;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+@media (min-width: 48rem) {
+
+    .totw ul li {
+        padding-left: 4rem;
+        margin: 4rem 0;
+    }
+
+    .totw ul li h2 {
+        font-size: 4em;
+    }
+
+    .totw ul li h3 {
+        font-size: 1.5em;
+    }
 }
