@@ -159,7 +159,7 @@ nav ul li:last-child {
     border: 1px solid black;
     display: flex;
     padding-left: 1.5em;
-    margin: 2em 0;
+    margin-bottom: 4em;
     line-height: 1.25;
     align-items: center;
 }
@@ -195,7 +195,7 @@ nav ul li:last-child {
 
     .totw ul li {
         padding-left: 4rem;
-        margin: 4rem 0;
+        margin-bottom: 4rem;
     }
 
     .totw ul li h2 {
@@ -205,4 +205,31 @@ nav ul li:last-child {
     .totw ul li h3 {
         font-size: 1.5em;
     }
+}
+
+.loot {
+    padding: 4rem 0;
+}
+
+.loot ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.loot ul li {
+    line-height: 2;
+    border: 1px solid black;
+}
+
+.loot ul li div {
+    padding: 1.5em;
+    border-top: 1px solid black;
+}
+
+.loot h2, p {
+    max-width: 32em;
+    line-height: 1.3;
 }
