@@ -36,7 +36,7 @@ ul {
 }
 
 .logo {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 .container {
@@ -54,13 +54,13 @@ ul {
 
 .grid-item {
     width: 50%;
-    border: 0.75em solid white;
+    border: 0.5em solid white;
 }
 
 @media (min-width: 48rem) {
     .grid-item {
         width: 25%;
-        border: 1.5em solid white;
+        border: 1em solid white;
     }
 }
 
@@ -96,7 +96,10 @@ a:hover,
 }
 
 nav {
-    /* flex: 1; */
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.125em;
 }
 
 nav ul {
@@ -124,10 +127,16 @@ nav ul li:last-child {
 
 .found ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
     list-style: none;
     padding: 0;
+}
+
+@media (min-width: 48rem) {
+    .found ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .found ul li {
@@ -170,10 +179,11 @@ nav ul li:last-child {
 
 .totw ul li p {
     text-transform: uppercase;
-    font-size: 0.75em;
-    font-weight: 900;
+    font-size: 0.875em;
+    font-weight: 700;
     font-family: sans-serif;
-    opacity: 0.5;
+    letter-spacing: 0.125em;
+    color: #999;
 }
 
 .totw ul li h2 {
@@ -184,7 +194,6 @@ nav ul li:last-child {
 .totw ul li h3 {
     font-size: 1em;
     font-weight: 400;
-    font-family: sans-serif;
 }
 
 .totw ul li img {
@@ -199,11 +208,11 @@ nav ul li:last-child {
     }
 
     .totw ul li h2 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .totw ul li h3 {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 
@@ -211,13 +220,42 @@ nav ul li:last-child {
     padding: 4rem 0;
 }
 
+.loot h2 {
+    margin-bottom: 0.5em;
+}
+
 .loot ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(320px, 1fr);
+    overflow-x: scroll;
     list-style: none;
     padding: 0;
+    padding-bottom: 3em;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: black;
+    margin-bottom: 4em;
 }
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 9999px;
+    background-color: #aaa;
+  }
 
 .loot ul li {
     line-height: 2;
@@ -229,7 +267,8 @@ nav ul li:last-child {
     border-top: 1px solid black;
 }
 
-.loot h2, p {
+.loot h2,
+p {
     max-width: 32em;
     line-height: 1.3;
 }

@@ -1,8 +1,26 @@
-<meta name="theme-color" content="#ffffff">
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <title>serifsanserifs &ndash; loot</title>
+    <meta name="description" content="typography books, apparel, and more">
+    <meta name="author" content="pellosophical">
+
+    <meta property="og:title" content="serifsanserifs">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.serifsanserifs.com/">
+    <meta property="og:description" content="a type experiment">
+    <meta property="og:image" content="image.png">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+</head>
 
 <body>
 
@@ -14,7 +32,6 @@
                     <li><a href="index.html">pins</a></li>
                     <li><a href="totw.html">totw</a></li>
                     <li><a href="fdry.html">fdry</a></li>
-                    <!-- <li><a href="jrnl.html">jrnl</a></li> -->
                     <li><a class="active">loot</a></li>
                 </ul>
             </nav>
@@ -23,6 +40,8 @@
 
     <section class="loot">
         <div class="container">
+            <!-- <h1>loot</h1> -->
+            <h2>books</h2>
             <ul>
                 <li>
                     <img src="img/primer.png">
@@ -38,8 +57,7 @@
                     <div>
                         <h2>Designing Type</h2>
                         <h3>by Karen Cheng</h3>
-                        <p>Type foundry and typeface projects by Michael Mischler and Nik Thoenen.</p>
-                        <a href="https://amzn.to/3IJWYLp" target="_blank">visit site</a>
+                        <a href="https://amzn.to/3IJWYLp" target="_blank">get the book</a>
                     </div>
                 </li>
                 <li>
@@ -47,74 +65,44 @@
                     <div>
                         <h2>The Elements of Typographic Style</h2>
                         <h3>by Robert Bringhurst</h3>
-                        <p>Type foundry and typeface projects by Michael Mischler and Nik Thoenen.</p>
-                        <a href="https://amzn.to/3AWiACg" target="_blank">visit site</a>
+                        <a href="https://amzn.to/3AWiACg" target="_blank">get the book</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/history.png">
+                    <div>
+                        <h2>A Visual History of Type</h2>
+                        <h3>by Paul McNeil</h3>
+                        <a href="https://amzn.to/3uZXsr9" target="_blank">get the book</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/anatomy.png">
+                    <div>
+                        <h2>The Anatomy of Type</h2>
+                        <h3>by Stephen Coles</h3>
+                        <a href="https://amzn.to/3PK3y6Z" target="_blank">get the book</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/extrabold.png">
+                    <div>
+                        <h2>Extra Bold</h2>
+                        <h3>by Ellen Lupton</h3>
+                        <a href="https://amzn.to/3IPHDJ0" target="_blank">get the book</a>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
 
-
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS9DPPXM5E"></script>
     <script>
-        // external js: isotope.pkgd.js
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        // init Isotope
-        var iso = new Isotope('.grid', {
-            percentPosition: true,
-            masonry: {
-                // use outer width of grid-sizer for columnWidth
-                columnWidth: '.grid-sizer'
-            }
-        });
-
-        // filter functions
-        var filterFns = {
-            // show if number is greater than 50
-            numberGreaterThan50: function (itemElem) {
-                var number = itemElem.querySelector('.number').textContent;
-                return parseInt(number, 10) > 50;
-            },
-            // show if name ends with -ium
-            ium: function (itemElem) {
-                var name = itemElem.querySelector('.name').textContent;
-                return name.match(/ium$/);
-            }
-        };
-
-        // bind filter button click
-        var filtersElem = document.querySelector('.filters-button-group');
-        filtersElem.addEventListener('click', function (event) {
-            // only work with buttons
-            if (!matchesSelector(event.target, 'button')) {
-                return;
-            }
-            var filterValue = event.target.getAttribute('data-filter');
-            // use matching filter function
-            filterValue = filterFns[filterValue] || filterValue;
-            iso.arrange({
-                filter: filterValue
-            });
-        });
-
-        // change is-checked class on buttons
-        var buttonGroups = document.querySelectorAll('.button-group');
-        for (var i = 0, len = buttonGroups.length; i < len; i++) {
-            var buttonGroup = buttonGroups[i];
-            radioButtonGroup(buttonGroup);
-        }
-
-        function radioButtonGroup(buttonGroup) {
-            buttonGroup.addEventListener('click', function (event) {
-                // only work with buttons
-                if (!matchesSelector(event.target, 'button')) {
-                    return;
-                }
-                buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-                event.target.classList.add('is-checked');
-            });
-        }
+        gtag('config', 'G-PS9DPPXM5E');
     </script>
 
 </body>
