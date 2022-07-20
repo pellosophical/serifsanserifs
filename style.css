@@ -57,6 +57,7 @@ ul {
     border: 1em solid white;
   }
 }
+
 /**
 h e a d e r
 **/
@@ -69,15 +70,22 @@ header {
   color: white;
   z-index: 999;
 }
+
 header .container {
   padding: 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
+
 header a {
   color: #fff;
   text-decoration: none;
+}
+
+@media (min-width: 48rem) {
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 a {
@@ -112,6 +120,10 @@ nav ul li {
   margin: 0 0.5rem;
 }
 
+nav ul li:first-child {
+  margin-left: 0;
+}
+
 nav ul li:last-child {
   margin-right: 0;
 }
@@ -141,6 +153,7 @@ f d r y
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 .found h2 {
   margin: 0.125em 0 0;
 }
@@ -220,6 +233,7 @@ t o t w
     font-size: 1.25em;
   }
 }
+
 .loot {
   padding: 4rem 0;
 }
@@ -261,10 +275,12 @@ t o t w
   height: 6px;
   border-radius: 9999px;
 }
+
 .loot ::-webkit-scrollbar-thumb {
   border-radius: 9999px;
   background-color: #333;
 }
+
 .loot ::-webkit-scrollbar-track {
   border-radius: 9999px;
   background-color: #ddd;
